@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewData["Title"] = "Monitors";
+}
+<script src="~/js/Monitor.js"></script>
+
+<div>
+    <div class="headline" style="height:30px; border-bottom:1px solid #e3e3e3;">
+        <span style="padding-left:10px;"> Monitor List </span>
+
+        <div id="divaction">
+            <div id="divactionselect">
+                
+                    <select id="monitoraction">
+                        <option value="0">Select Action</option>
+                        <option value="1">Suspend</option>
+                        <option value="2">Activate</option>
+                        <option value="3">Delete</option>
+                    </select>
+              
+            </div>
+        </div>
+    </div>
+
+    <table id="monitorlist" style="width:90%;">
+        <thead>
+            <tr class="rowhead nohover">
+                <td align="center" class="chkhead">
+                    <input id="select_all" class="checkbox" type="checkbox">
+                </td>
+                <td class="imghead"></td>
+                <td>
+                   <span id="headappname">Monitor Name</span>
+                </td>
+                <td>
+                    <span>Monitor Type</span>
+                </td>
+                <td>
+                    <span>Last polling time</span>
+                </td>
+            </tr>
+        </thead>
+        <tbody id="monitors">
+
+        </tbody>
+    </table>
+
+    
+</div>
+

@@ -1,0 +1,44 @@
+﻿<!doctype html>
+<html>
+<head>
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/js/jquery.cookie.js"></script>
+    <script src="~/js/site.js?v=2"></script>
+    <link href="~/css/style.css?v=1" rel="stylesheet" />
+</head>
+<body class="menu-default">
+    <div class="outer-container">
+        <div class="pusher" style="margin-left:-54px; width:200px;">
+            <nav id="mp-menu" class="mp-menu menus">
+                <div class="mp-level block-menu-block-5 slice design-council-slice block-menu-block block-menu-block " role="navigation">
+                    <ul id="nav">
+                        <li id="mnulistmonitor">
+                            <a href="../Monitor/ListMonitors">List Monitors</a>
+                        </li>
+                        @*<li id="mnucurrentstatus">
+                            <a href="../Monitor/CurrentStatus">Current Status</a>
+                        </li>*@
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div id="header">
+            <table cellpadding="5">
+                <tr>
+                    <td style="border-right:1px solid #dad9d9;"><span>Welcome @ViewBag.UserName</span></td>
+                    <td><a style="margin-left:5px;" id="logout" href="../Home/Logout">Logout</a></td>
+                </tr>
+            </table>
+            
+           
+            
+        </div>
+        <div class="main-canvas container">
+            @RenderBody()
+        </div>
+    </div>
+
+    <div id="divOverlay" style="display:none;"></div>
+</body>
+</html>
+

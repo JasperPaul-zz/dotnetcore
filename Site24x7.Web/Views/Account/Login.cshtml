@@ -1,0 +1,29 @@
+﻿
+@{
+    Layout = null;
+}
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="~/js/Login.js"></script>
+<link href="~/css/site.css" rel="stylesheet" />
+<div class="loginlink">
+    <a href="/account/authlogin">Login </a> via AuthToken
+</div>
+<div class="login-page">
+    <div class="form">
+        <form class="login-form" method="post" asp-controller="Account" asp-action="UserLogin">
+            <input type="text" name="email" placeholder="Enter Email" />
+            <input type="password" name="password" placeholder="Enter Password" />
+            <button>login</button>
+            @*<p class="message"><a target="_blank" href="https://accounts.zoho.com/u/h#sessions/userauthtoken">Click here </a>to manage Auth token.</p>
+            <p class="message"><a target="_blank" href="https://accounts.zoho.com/apiauthtoken/create?SCOPE=Site24x7/site24x7api">Click here </a>to create Auth token.</p>*@
+        </form>
+        <div id="errormessage" style="display:none;"><span class="error" id="message">Invalid Auth Token.</span></div>
+    </div>
+
+    
+</div>
